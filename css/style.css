@@ -1,0 +1,47 @@
+body {
+  height: 20000px;
+  background-color: #ffffff;
+}
+
+.bloc {
+}
+
+.projContainer {
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  text-align: center;
+}
+
+.projContainer ul {
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.projElement {
+  display: inline-block;
+  width: 25%;
+  top:50%;
+  vertical-align: middle;
+  margin-right: 0.5%;
+  padding: 0;
+}
+
+.projContainer img {
+  cursor: pointer;
+  max-width: 100%;
+  width: 100%;
+  height: auto !important;
+  margin: 0;
+  padding: 0;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+}
