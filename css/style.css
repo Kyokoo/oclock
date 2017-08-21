@@ -115,6 +115,7 @@ body {
   -o-transform:translateY(-50%);
   transform: translateY(-50%);
   background-color: grey;
+  pointer-events: all;
 }
 
 .projContainer img {
@@ -131,7 +132,7 @@ body {
   display: block;
 }
 
-#slimi {
+#project01 {
   padding-top: 120vh;
   height: 100%;
   width: 100%;
@@ -139,21 +140,56 @@ body {
   text-align: center;
 }
 
-#slimi ul{
+#project01 ul{
   overflow: hidden;
 }
+ /* Captions */
+.caption {
+  font-family: source-sans-pro, sans-serif;
+  font-size: 12pt;
+  font-weight: 400;
+  text-align: left;
+}
 
-#captionSlimiMag {
+.caption h3 {
+  font-weight: 800;
+  display: inline;
+}
+#captionProject01-1 {
   display: none;
 }
-#captionSlimiWeb {
+#captionProject01-2 {
+  display: none;
+}
+#captionProject02-1 {
+  display: none;
+}
+#captionProject03-1 {
+  display: none;
+}
+#captionProject04-1 {
+  display: none;
+}
+#captionProject05-1 {
   display: none;
 }
 
-#slimiMag:hover + #captionSlimiMag{
+/* Caption actions */
+#project01-1:hover + #captionProject01-1{
   display: block;
 }
-
-#slimiWeb:hover + #captionSlimiWeb{
+#project01-2:hover + #captionProject01-2{
+  display: block;
+}
+#project02-1:hover + #captionProject02-1{
+  display: block;
+}
+#project03-1:hover + #captionProject03-1{
+  display: block;
+}
+#project04-1:hover + #captionProject04-1{
+  display: block;
+}
+#project05-1:hover + #captionProject05-1{
   display: block;
 }

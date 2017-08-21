@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(function() {
+$(".blockhover").hover(function(){
   $(".caption").each(function() {
     var topMin = parseInt($(this).attr("data-captionTopStart"));
     var topMax = parseInt($(this).attr("data-captionTopDist"));
@@ -14,4 +15,5 @@ $(document).ready(function(){
       left: left + '%',
     })
   })
+});
 });
