@@ -4,11 +4,20 @@
     <meta charset="utf-8">
     <title>Bureau O'Clock</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/oclock.js"></script>
+
+
   </head>
   <body style="height:15000px">
+
     <div id="skrollr-body">
       <div class="projContainer">
-        <span class="logo" data-0="top:50%; font-size:60pt;" data-top="top:5%;font-size:43pt" data-1000="top:5%;font-size:43pt">bureau __ o'clock</span>
+        <div id="logo" data-0="top:50%;" data-1000="top:5%;">
+          <span class="logo alignLogo" >bureau</span>
+          <span class="logo underline">&nbsp;4&nbsp;</span>
+          <span class="logo alignLogo">o'clock</span>
+        </div>
       </div>
       <div id="slimi">
         <ul>
@@ -17,6 +26,8 @@
           <li class="simpleBlock portrait">
           </li>
         </ul>
+        <div class="caption">Block01</div>
+        <div class="caption">Block02</div>
       </div>
       <div class="projContainer" data-0="display:none;" data-1500="display:block;">
         <div class="projElement landscape" data-1500="left:-25%" data-2500="left:100%" style="top:40%;"></div>
@@ -55,5 +66,6 @@
     <script type="text/javascript">
       var s = skrollr.init();
 	  </script>
+
   </body>
 </html>
