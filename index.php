@@ -12,7 +12,7 @@
   <body style="height:15000px">
 
     <div id="skrollr-body">
-      <div class="projContainer">
+      <div class="projContainer" style="z-index:1">
         <div id="logo" data-0="top:50%;" data-1000="top:5%;">
           <span class="logo alignLogo" >bureau</span>
           <span class="logo underline" data-0="color:rgba(0,0,0,0)" data-700="color:rgba(0,0,0,0)" data-1000="color:rgba(0,0,0,1)">&nbsp;4&nbsp;</span>
@@ -20,14 +20,12 @@
         </div>
       </div>
       <div id="slimi">
-        <ul>
-          <li class="simpleBlock portrait">
-          </li>
-          <li class="simpleBlock portrait">
-          </li>
-        </ul>
-        <div class="caption">Block01</div>
-        <div class="caption">Block02</div>
+          <div id="slimiMag" class="simpleBlock portrait simpleBlockLeft"></div>
+          <div id="captionSlimiMag" class="caption" data-captionLeftStart="5" data-captionLeftDist="20" data-captionTopStart="15" data-captionTopDist="50">
+            Block01 <br/> BlaBla BlaBla <br/> BlaBla BlaBla</div>
+          <div id="slimiWeb" class="simpleBlock portrait simpleBlockRight"></div>
+          <div id="captionSlimiWeb" class="caption" data-captionLeftStart="70" data-captionLeftDist="20" data-captionTopStart="15" data-captionTopDist="50">
+            Block02 <br/> BlaBla BlaBla <br/> BlaBla BlaBla</div>
       </div>
       <div class="projContainer" data-0="display:none;" data-1500="display:block;">
         <div class="projElement landscape" data-1500="left:-25%" data-2500="left:100%" style="top:50%;"></div>
