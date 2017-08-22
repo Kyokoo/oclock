@@ -132,6 +132,33 @@ body {
   display: block;
 }
 
+#menu {
+  display: block;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+}
+
+.menu {
+  pointer-events: all;
+  font-family: souce-sans-pro, sans-serif;
+  font-size: 13pt;
+  font-weight: 600;
+  position: absolute;
+  z-index: 999;
+}
+
+#about {
+  bottom: 30px;
+  left: 30px;
+}
+
+#print {
+  bottom: 30px;
+  right: 30px;
+}
+
 #project01 {
   padding-top: 120vh;
   height: 100%;
@@ -140,17 +167,25 @@ body {
   text-align: center;
 }
 
-#project01 ul{
-  overflow: hidden;
+.panel {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  top: 100%;
+  display: block;
+  background-color: red;
+  z-index: 2;
 }
+
+
  /* Captions */
 .caption {
   font-family: source-sans-pro, sans-serif;
   font-size: 12pt;
   font-weight: 400;
   text-align: left;
+  opacity: 0;
 }
-
 .caption h3 {
   font-weight: 800;
   display: inline;

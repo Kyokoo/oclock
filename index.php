@@ -12,12 +12,21 @@
 
     <div id="skrollr-body">
       <div class="projContainer" style="z-index:1">
-        <div id="logo" data-0="top:50%;" data-1000="top:5%;">
+        <div id="logo" data-0="top:50%;" data-600="top:5%;">
           <span class="logo alignLogo" >bureau</span>
-          <span class="logo underline" data-0="color:rgba(0,0,0,0)" data-300="color:rgba(0,0,0,0)" data-1000="color:rgba(0,0,0,1)">&nbsp;4&nbsp;</span>
+          <span class="logo underline" data-0="color:rgba(0,0,0,0)" data-200="color:rgba(0,0,0,0)" data-500="color:rgba(0,0,0,1)">&nbsp;4&nbsp;</span>
           <span class="logo alignLogo">o'clock</span>
         </div>
       </div>
+      <div id="menu">
+        <div id="about" class="menu">about</div>
+        <div id="print" class="menu">print</div>
+        <div id="aboutPanel" class="panel">
+        </div>
+        <div id="printPanel" class="panel">
+        </div>
+      </div>
+
       <div id="project01">
           <div id="project01-1" class="simpleBlock portrait simpleBlockLeft blockhover"></div>
           <div id="captionProject01-1" class="caption" data-captionLeftStart="5" data-captionLeftDist="20" data-captionTopStart="15" data-captionTopDist="50">
