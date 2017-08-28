@@ -75,12 +75,20 @@ body {
 }
 
 .simpleBlockLeft {
-  -webkit-transform: translateX(-100%);
-  -moz-transform:translateX(-100%);
-  -ms-transform:translateX(-100%);
-  -o-transform:translateX(-100%);
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%) scale(1) !important;
+  -moz-transform:translateX(-100%) scale(1) !important;
+  -ms-transform:translateX(-100%) scale(1) !important;
+  -o-transform:translateX(-100%) scale(1) !important;
+  transform: translateX(-100%) scale(1) !important;
   left:49.5%;
+}
+
+.simpleBlockLeft:hover {
+  -webkit-transform: translateX(-100%) scale(0.95) !important;
+  -moz-transform:translateX(-100%) scale(0.95) !important;
+  -ms-transform:translateX(-100%) scale(0.95) !important;
+  -o-transform:translateX(-100%) scale(0.95) !important;
+  transform: translateX(-100%) scale(0.95) !important;
 }
 
 .projContainer {
@@ -133,6 +141,7 @@ body {
 }
 
 #menu {
+  pointer-events: none;
   display: block;
   position: fixed;
   height: 100%;
@@ -177,6 +186,52 @@ body {
   z-index: 2;
 }
 
+.blockhover {
+  overflow: hidden;
+}
+
+.blockhover img {
+  -webkit-transform: scale(1);
+  -moz-transform:scale(1);
+  -ms-transform:scale(1);
+  -o-transform:scale(1);
+  transform: scale(1);
+  -webkit-transition: .9s ease-in-out;
+  -moz-transform: .9s ease-in-out;
+  -ms-transform: .9s ease-in-out;
+  -o-transform: .9s ease-in-out;
+  transition: .9s ease-in-out;
+  height: 100%;
+}
+
+.blockhover {
+  -webkit-transform: scale(1);
+  -moz-transform:scale(1);
+  -ms-transform:scale(1);
+  -o-transform:scale(1);
+  transform: scale(1);
+  -webkit-transition: .9s ease-in-out;
+  -moz-transform: .9s ease-in-out;
+  -ms-transform: .9s ease-in-out;
+  -o-transform: .9s ease-in-out;
+  transition: .9s ease-in-out;
+}
+
+.blockhover:hover {
+  -webkit-transform: scale(0.95) ;
+  -moz-transform:scale(0.95);
+  -ms-transform:scale(0.95);
+  -o-transform:scale(0.95);
+  transform: scale(0.95);
+}
+
+.blockhover:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform:scale(1.1);
+  -ms-transform:scale(1.1);
+  -o-transform:scale(1.1);
+  transform: scale(1.1);
+}
 
  /* Captions */
 .caption {

@@ -28,10 +28,10 @@
       </div>
 
       <div id="project01">
-          <div id="project01-1" class="simpleBlock portrait simpleBlockLeft blockhover"></div>
+          <div id="project01-1" class="simpleBlock portrait simpleBlockLeft blockhover"><img src="img/portrait01.jpg" /></div>
           <div id="captionProject01-1" class="caption" data-captionLeftStart="5" data-captionLeftDist="20" data-captionTopStart="15" data-captionTopDist="50">
             <h3>Slimi Magazine</h3> <br/>Fashion magazine<br/>& website</div>
-          <div id="project01-2" class="simpleBlock portrait simpleBlockRight blockhover"></div>
+          <div id="project01-2" class="simpleBlock portrait simpleBlockRight blockhover"><img src="img/portrait02.jpg" /></div>
           <div id="captionProject01-2" class="caption" data-captionLeftStart="70" data-captionLeftDist="20" data-captionTopStart="15" data-captionTopDist="50">
             <h3>Block02</h3> <br/> BlaBla BlaBla <br/> BlaBla BlaBla</div>
       </div>

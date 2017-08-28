@@ -1,27 +1,15 @@
 $(document).ready(function() {
   var aboutShow = false;
-  var printShow = false;
     $('#about').click(function(e) {
       if (!aboutShow){
         $("#aboutPanel").animate({'top': '0'},400);
-        $("#printPanel").animate({'top': '100%'}, 400);
-        printShow = false;
       }
       else
         $("#aboutPanel").animate({'top': '100%'},400);
       aboutShow = !aboutShow;
     });
 
-    $('#print').click(function(e) {
-      if (!printShow){
-        $("#printPanel").animate({'top': '0'},400);
-        $("#aboutPanel").animate({'top': '100%'}, 400);
-        aboutShow = false;
-      }
-      else
-        $("#printPanel").animate({'top': '100%'},400);
-      printShow = !printShow;
-    });
+
 });
 
 $(function() {
