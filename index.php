@@ -42,7 +42,7 @@
       </div>
 
       <div id="project03" class="projContainer" data-0="display:none;" data-2200="display:block;">
-        <div id="project03-1" class="projElement landscape blockhover" data-2200="left:100%" data-3200="left:-25%" style="top:50%;"><figure><img src="img/portrait01.jpg" /></div>
+        <div id="project03-1" class="projElement landscape blockhover" data-2200="left:100%" data-3400="left:-50%" style="top:50%;"><figure><img src="img/portrait01.jpg" /></div>
         <div id="captionProject03-1" class="caption" data-captionLeftStart="10" data-captionLeftDist="20" data-captionTopStart="15" data-captionTopDist="50">
           <h3>Block04</h3> <br/> BlaBla BlaBla <br/> BlaBla BlaBla</div>
       </div>
