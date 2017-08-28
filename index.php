@@ -12,7 +12,7 @@
 
     <div id="skrollr-body">
       <div class="projContainer" style="z-index:1">
-        <div id="logo" data-0="top:50%;" data-600="top:5%;">
+        <div id="logo" data-0="top:50%;" data-350="top:5%;">
           <span class="logo alignLogo" >bureau</span>
           <span class="logo underline" data-0="color:rgba(0,0,0,0)" data-200="color:rgba(0,0,0,0)" data-500="color:rgba(0,0,0,1)">&nbsp;4&nbsp;</span>
           <span class="logo alignLogo">o'clock</span>
