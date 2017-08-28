@@ -12,7 +12,7 @@
 
     <div id="skrollr-body">
       <div class="projContainer" style="z-index:1">
-        <div id="logo" data-0="top:50%;" data-350="top:5%;">
+        <div id="logo" data-0="top:50%;" data-700="top:5%;">
           <span class="logo alignLogo" >bureau</span>
           <span class="logo underline" data-0="color:rgba(0,0,0,0)" data-200="color:rgba(0,0,0,0)" data-500="color:rgba(0,0,0,1)">&nbsp;4&nbsp;</span>
           <span class="logo alignLogo">o'clock</span>
@@ -59,7 +59,7 @@
       </div>
 
       <div class="projContainer" data-0="display:none;" data-3000="display:block;">
-        <div class="projElement landscape blockhover" data-5400="top:-20%" data-7500="top:120%" style="left:50%;"><figure><img src="img/portrait01.jpg" /></div>
+        <div class="projElement landscape blockhover" data-4800="top:-20%" data-6900="top:120%" style="left:50%;"><figure><img src="img/portrait01.jpg" /></div>
       </div>
 
       <div class="landscape block blockhover" style="top:5200px; left:35%;">
@@ -67,13 +67,12 @@
       </div>
 
       <div class="projContainer" data-0="display:none;" data-7500="display:block;">
-        <div class="projElement landscape blockhover" data-7500="left:-25%" data-8500="left:100%" style="top:40%;"><figure><img src="img/portrait01.jpg" /></div>
+        <div class="projElement landscape blockhover" data-7500="left:-25%" data-8500="left:100%" style="top:50%;"><figure><img src="img/portrait01.jpg" /></div>
       </div>
 
       <div class="landscape block blockhover" style="top:6200px; left:35%;">
 <figure><img src="img/portrait01.jpg" />
       </div>
-
 
     </div>
     <script type="text/javascript" src="js/skrollr.min.js"></script>

@@ -1,15 +1,38 @@
 $(document).ready(function() {
   var aboutShow = false;
-    $('#about').click(function(e) {
-      if (!aboutShow){
-        $("#aboutPanel").animate({'top': '0'},400);
+  var animation = false;
+  $('#about').click(function(e) {
+    if (!aboutShow){
+      $("#aboutPanel").animate({'top': '0'},400);
+    }
+    else
+      $("#aboutPanel").animate({'top': '100%'},400);
+    aboutShow = !aboutShow;
+  });
+  var lastScrollTop = 0;
+  $(window).scroll(function(event){
+     var st = $(this).scrollTop();
+     if (st > lastScrollTop){
+       if (st < $('#project01-1').offset().top - ($('#project01-1').height() / 2) && animation == false){
+         animation = true;
+         $('html, body').stop().animate({
+             scrollTop: $('#project01-1').offset().top - ($('#project01-1').height() / 2)
+         }, 1000, function(){
+           animation = false;
+         });
       }
-      else
-        $("#aboutPanel").animate({'top': '100%'},400);
-      aboutShow = !aboutShow;
-    });
-
-
+    } else if (st < lastScrollTop) {
+        if (st < $('#project01-1').offset().top - ($('#project01-1').height() / 2) && animation == false){
+          animation = true;
+          $('html, body').stop().animate({
+              scrollTop: 0
+          }, 1000, function(){
+            animation = false;
+          });
+        }
+     }
+     lastScrollTop = st;
+  });
 });
 
 $(function() {
