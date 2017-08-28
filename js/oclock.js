@@ -33,10 +33,17 @@ $(document).ready(function() {
      }
      lastScrollTop = st;
   });
-});
 
-$(function() {
+  // hover functions
   $(".blockhover").hover(function(){
+    var category = $(this).attr("data-category");
+    var clock = $(this).attr("data-clock");
+    if (category == null)
+      category = "";
+    if (clock == null)
+      clock = "4";
+    $('#clock').html("&nbsp" + clock + "&nbsp");
+    $('#category').html(category);
     $(".caption").each(function() {
       $(this).animate({'opacity': '1'},300)
       var topMin = parseInt($(this).attr("data-captionTopStart"));

@@ -14,13 +14,13 @@
       <div class="projContainer" style="z-index:1">
         <div id="logo" data-0="top:50%;" data-700="top:5%;">
           <span class="logo alignLogo" >bureau</span>
-          <span class="logo underline" data-0="color:rgba(0,0,0,0)" data-200="color:rgba(0,0,0,0)" data-500="color:rgba(0,0,0,1)">&nbsp;4&nbsp;</span>
+          <span id="clock" class="logo underline" data-0="color:rgba(0,0,0,0)" data-400="color:rgba(0,0,0,0)" data-500="color:rgba(0,0,0,1)">&nbsp;4&nbsp;</span>
           <span class="logo alignLogo">o'clock</span>
         </div>
       </div>
       <div id="menu">
         <div id="about" class="menu">about</div>
-        <div id="print" class="menu">print</div>
+        <div id="category" class="menu"></div>
         <div id="aboutPanel" class="panel">
         </div>
         <div id="printPanel" class="panel">
@@ -28,10 +28,10 @@
       </div>
 
       <div id="project01">
-          <div id="project01-1" class="simpleBlock portrait simpleBlockLeft blockhover"><figure><img src="img/portrait01.jpg" /></figure></div>
+          <div id="project01-1" class="simpleBlock portrait simpleBlockLeft blockhover" data-category="print" data-clock="3"><figure><img src="img/portrait01.jpg" /></figure></div>
           <div id="captionProject01-1" class="caption" data-captionLeftStart="5" data-captionLeftDist="20" data-captionTopStart="15" data-captionTopDist="50">
             <h3>Slimi Magazine</h3> <br/>Fashion magazine<br/>& website</div>
-          <div id="project01-2" class="simpleBlock portrait simpleBlockRight blockhover"><figure><img src="img/portrait02.jpg" /></figure></div>
+          <div id="project01-2" class="simpleBlock portrait simpleBlockRight blockhover" data-category="website" data-clock="5"><figure><img src="img/portrait02.jpg" /></figure></div>
           <div id="captionProject01-2" class="caption" data-captionLeftStart="70" data-captionLeftDist="20" data-captionTopStart="15" data-captionTopDist="50">
             <h3>Block02</h3> <br/> BlaBla BlaBla <br/> BlaBla BlaBla</div>
       </div>
