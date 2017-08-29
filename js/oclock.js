@@ -46,7 +46,8 @@ $(document).ready(function() {
     if (category == null)
       category = "";
     if (clock == null)
-      clock = "4";
+      clock = "";
+    $('#clock').css({color: 'rgba(0, 0, 0, 1)'});
     $('#clock').html("&nbsp" + clock + "&nbsp");
     $('#category').html(category);
 
@@ -75,8 +76,12 @@ $(document).ready(function() {
       })
     })
   }, function() {
+    $('#clock').css({color: 'rgba(0, 0, 0, 0)'});
+    $('#category').html("");
     $(".caption").each(function(){
       $(this).css({opacity: '0'});
+
+
     })
   });
 });

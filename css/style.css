@@ -4,7 +4,6 @@ body {
   margin: 0;
 }
 
-
 .portrait {
   width: 350px;
   height: 465px;
@@ -65,6 +64,7 @@ body {
 
 .alignLogo {
   padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .simpleBlock {
