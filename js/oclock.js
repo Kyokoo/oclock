@@ -17,16 +17,17 @@ $(document).ready(function() {
          animation = true;
          $('html, body').stop().animate({
              scrollTop: $('#project01-1').offset().top - ($('#project01-1').height() / 2)
-         }, 1000, function(){
+         }, 800, function(){
            animation = false;
+           $(this).scrollTop($('#project01-1').offset().top - ($('#project01-1').height() / 2) + 1);
          });
       }
     } else if (st < lastScrollTop) {
-        if (st < $('#project01-1').offset().top - ($('#project01-1').height() / 2) && animation == false){
+        if (st < $('#project01-1').offset().top - ($('#project01-1').height() / 2) - 20 && animation == false){
           animation = true;
           $('html, body').stop().animate({
               scrollTop: 0
-          }, 1000, function(){
+          }, 800, function(){
             animation = false;
           });
         }
@@ -34,28 +35,41 @@ $(document).ready(function() {
      lastScrollTop = st;
   });
 
-  // hover functions
+  // Hover blocs
   $(".blockhover").hover(function(){
+
+    // Logo and category changes
+    // Data from HTML
     var category = $(this).attr("data-category");
     var clock = $(this).attr("data-clock");
+    // Avoiding "undefined" and apply default value
     if (category == null)
       category = "";
     if (clock == null)
       clock = "4";
     $('#clock').html("&nbsp" + clock + "&nbsp");
     $('#category').html(category);
+
+    // Caption placement & animation
+    // Need optimization !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     $(".caption").each(function() {
-      $(this).animate({'opacity': '1'},300)
+      // Angle of the rotation
+      var angle = 90;
+      // Data from HTML
       var topMin = parseInt($(this).attr("data-captionTopStart"));
       var topMax = parseInt($(this).attr("data-captionTopDist"));
       var leftMin = parseInt($(this).attr("data-captionLeftStart"));
       var leftMax = parseInt($(this).attr("data-captionLeftDist"));
+      // Randomizer
       var top = parseInt(Math.floor((Math.random() * topMax) + topMin));
       var left = parseInt(Math.floor((Math.random() * leftMax) + leftMin));
+      // Caption's animation
+      $(this).animate({'opacity': '1'},300)
+      // Caption style
       $(this).css({
         position: 'fixed',
         zIndex: '999',
-        '-webkit-transform': 'rotate(' + Math.floor((Math.random() * 90) + 1 - 45) + 'deg)',
+        '-webkit-transform': 'rotate(' + Math.floor(((Math.random() * angle) + 1) - (angle/2)) + 'deg)',
         top: top + '%',
         left: left + '%',
       })
