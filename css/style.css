@@ -1,12 +1,11 @@
 body {
-  height: 20000px;
   background-color: #ffffff;
   margin: 0;
 }
 
 .portrait {
-  width: 350px;
-  height: 465px;
+  width: 20.5vw !important;
+  height: 27.25vw !important;
   z-index: 0;
 }
 
@@ -15,9 +14,17 @@ body {
 }
 
 .landscape {
-  width: 465px;
-  height: 350px;
+  width: 27.25vw !important;
+  height: 20.5vw !important;
   z-index: 0;
+}
+
+.anchorCenter {
+  -webkit-transform: translate(-50%,-50%)!important;
+  -moz-transform:translate(-50%,-50%)!important;
+  -ms-transform:translate(-50%,-50%)!important;
+  -o-transform:translate(-50%,-50%)!important;
+  transform: translate(-50%,-50%)!important;
 }
 
 .block {
@@ -29,14 +36,13 @@ body {
   display: inline-block;
   color: #000000;
   font-family: Rozha One;
-  font-size: 42pt;
   font-weight: 800;
 }
 
 #logo {
   top:50%;
   position: relative;
-  z-index: 5;
+  z-index: 999;
   -webkit-transform:
     scale(1,0.9)
     translateY(-50%); /* Safari and Chrome */
@@ -57,14 +63,14 @@ body {
 .underline {
   border-bottom: 2px solid rgb(32,32,30);
   vertical-align: top;
-  margin-right: 5px;
-  margin-left: 5px;
+  margin-right: 0.4vw;
+  margin-left: 0.4vw;
   padding-top: 2px;
 }
 
 .alignLogo {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
 }
 
 .simpleBlock {
@@ -147,7 +153,7 @@ body {
   position: fixed;
   height: 100%;
   width: 100%;
-  z-index: 999;
+  z-index: 998;
 }
 
 .menu {
@@ -183,7 +189,7 @@ body {
   width: 100%;
   top: 100%;
   display: block;
-  background-color: red;
+  /*background-color: red;*/
   z-index: 2;
 }
 
