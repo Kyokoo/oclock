@@ -3,27 +3,28 @@ $(document).ready(function() {
   var animation = false;
   var limit = false;
   var initialPageHeight = $('body').height();
+  var lastScrollTop = 0;
+  var overlayShow = false;
+  // Set here the colors for about's panel
+  // Colors are in RGB
+  var colors = [[8, 56, 105], [181, 167, 154], [213, 1, 42]];
 
   $('#about').click(function(e) {
     if (!aboutShow){
+      // Assign random color to aboutPanel
+      var color = randomColor(colors);
 
-      var color = randomColor();
       $("#aboutPanel").animate({'top': '0'},400);
       $("#aboutPanel").css({"background-color":  "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")"});
     }
     else
       $("#aboutPanel").animate({'top': '100%'},400);
+
     aboutShow = !aboutShow;
   });
 
 
-  function randomColor(){
-    var colors = new Array();
 
-    colors = [[8, 56, 105], [181, 167, 154], [213, 1, 42]];
-    return colors[Math.floor((Math.random() * 3))];
-  };
-  var lastScrollTop = 0;
   $(window).scroll(function(event){
      var st = $(this).scrollTop();
      var sb = $(document).height() - $(window).height() - $(window).scrollTop();
@@ -59,7 +60,6 @@ $(document).ready(function() {
           $('#aboutPanel').appendTo('#menu')
         }
      }
-
      lastScrollTop = st;
   });
 
@@ -109,8 +109,82 @@ $(document).ready(function() {
     $('#category').html("");
     $(".caption").each(function(){
       $(this).css({opacity: '0'});
-
-
     })
   });
+
+  $(".blockhover").click(function(){
+    if (!overlayShow){
+      overlayShow = true;
+
+      var htmlContent = $(this).find('.projectContent').html();
+      $("#overlayContent").html(htmlContent);
+      $("#overlayBody").css({display: 'block'});
+      $("#overlayBody").stop().animate({ 'opacity': '1'}, 300, function(){
+        $("#overlayContent").prependTo($('body'));
+        disableScroll();
+      });
+    }
+  });
+
+  $("#overlayBody").click(function(){
+    $('#overlayContent').appendTo($(this));
+    $("#overlayBody").stop().animate({ 'opacity': '0'}, 300, function(){
+      $("#overlayBody").css({display: 'none'}); overlayShow = false;
+      enableScroll();
+    });
+  })
+
+  // Generate random color from list
+  function randomColor(color){
+    return color[Math.floor((Math.random() * 3))];
+  };
+
+  function fillOverlay(){
+
+  };
+
+  function disableScroll(){
+    $('html, body').css({
+      overflow: 'hidden',
+      height: '100%'
+    });
+    $('.blockhover').each(function(){
+      var dim = ($(this).position().left) + "px";
+      $(this).css({'left': dim});
+    })
+  };
+
+  function enableScroll(){
+    $('html, body').css({
+      overflow: 'auto',
+      height: 'auto'
+    });
+    $(this).css({'right': dim});
+  };
+
+  function getScrollBarWidth () {
+    var inner = document.createElement('p');
+    inner.style.width = "100%";
+    inner.style.height = "200px";
+
+    var outer = document.createElement('div');
+    outer.style.position = "absolute";
+    outer.style.top = "0px";
+    outer.style.left = "0px";
+    outer.style.visibility = "hidden";
+    outer.style.width = "200px";
+    outer.style.height = "150px";
+    outer.style.overflow = "hidden";
+    outer.appendChild (inner);
+a
+    document.body.appendChild (outer);
+    var w1 = inner.offsetWidth;
+    outer.style.overflow = 'scroll';
+    var w2 = inner.offsetWidth;
+    if (w1 == w2) w2 = outer.clientWidth;
+
+    document.body.removeChild (outer);
+
+    return (w1 - w2);
+  };
 });
